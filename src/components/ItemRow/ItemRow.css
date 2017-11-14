@@ -1,0 +1,74 @@
+.ItemRow{
+  width: 100%;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  background: white;
+  display: flex;
+  justify-content: space-between;
+}
+.ItemRow::-webkit-scrollbar  {
+  display: none;
+}
+
+.ItemRow .item {
+  flex-shrink: 0;
+  margin: 0 4px 0 0;
+  // align-items: center;
+  // justify-content: center;
+}
+
+.ItemRow .sub-item {
+  // align-items: center;
+  // justify-content: center;
+  position: relative;
+  transition: .3s;
+  opacity: 1;
+}
+
+
+.ItemRow .item img {
+  width: 100%;
+  height: auto;
+}
+
+.ItemRow .item h3 {
+  position: absolute;
+  bottom: 0;
+  font-weight: 600;
+  color: white;
+  opacity: .8;
+  text-indent: 20px;
+  font-size: 18px;
+  margin: 0 0 10px;
+}
+.app-item-detail {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  justify-content: center;
+  align-content: center;
+  display: none;
+  animation: come .6s;
+  z-index: 500;
+}
+
+
+
+@keyframes come {
+  0%, 50% {
+    transform: scale(2);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}

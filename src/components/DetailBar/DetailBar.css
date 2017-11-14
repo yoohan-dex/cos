@@ -1,0 +1,40 @@
+.DetailBar{
+  display: flex;
+  position: absolute;
+  width: 100%;
+  height: 50px;
+  top: 0px;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 800;
+  animation: down .6s;
+}
+
+.DetailBar .cart, .DetailBar .toLeft {
+  display: inline-block;
+  position: relative;
+  width: 30px;
+  height: 30px;
+}
+.DetailBar .title {
+  width: 60%;
+  text-align: center;
+  color: #fab1ce;
+}
+
+.cart img, .toLeft img {
+  width: 80%;
+  height: 80%;
+  margin: 10%;
+}
+
+@keyframes down {
+  0% {
+    transform: translateY(-200%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

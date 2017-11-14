@@ -1,0 +1,16 @@
+.AppBottomBar {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  height: 50px;
+  bottom: 0px;
+  justify-content: space-around;
+  align-items: flex-start;
+  background: #EE7785;
+}
+
+.AppBottomBar img {
+  margin-top: 10px;
+  width: 30px;
+  height: 30px;
+}

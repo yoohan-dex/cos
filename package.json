@@ -1,0 +1,31 @@
+{
+  "name": "cosmetics",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "react-overdrive": "^0.0.9",
+    "react-scripts": "1.0.17",
+    "react-swipeable": "^4.2.0",
+    "react-swipeable-views": "^0.12.10",
+    "service-mocker": "^2.1.2"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "storybook": "start-storybook -p 9009 -s public",
+    "build-storybook": "build-storybook -s public"
+  },
+  "cca": {
+    "type": "class",
+    "path": "./src/components"
+  },
+  "devDependencies": {
+    "@storybook/addon-actions": "^3.2.15",
+    "@storybook/addon-links": "^3.2.15",
+    "@storybook/react": "^3.2.15"
+  }
+}

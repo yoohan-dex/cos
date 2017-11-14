@@ -1,0 +1,15 @@
+.BottomBar{
+  position: fixed;
+  width: 100%;
+  height: 34px;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 800;
+}
+.BottomBar img {
+  position: relative;
+
+
+}
