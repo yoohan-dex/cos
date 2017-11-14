@@ -8,7 +8,7 @@
 .color-choice, .weight-choice {
   display: flex;
   position: relative;
-  top: 100px;
+  top: 90px;
   left: 10%;
   justify-content: space-around;
   align-items: center;
@@ -16,7 +16,7 @@
   height: 100px;
 }
 .weight-choice {
-  top: 70px;
+  top: 60px;
   height: 100px;
 }
 
@@ -91,7 +91,7 @@
 
 .description {
   position: absolute;
-  bottom: 15%;
+  bottom: 10%;
   width: 100%;
   height: 60px;
   font-size: 30px;

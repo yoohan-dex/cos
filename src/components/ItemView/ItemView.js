@@ -52,7 +52,7 @@ class ItemView extends Component {
         <div
           className="ItemView"
           style={{
-            transform: `translateY(-${most(this.state.swipeUp) / 1.5}px)`,
+            transform: `translateY(-${most(this.state.swipeUp) / 1.5}px) `,
           }}
         >
           <SwipeableViews
