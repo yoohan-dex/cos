@@ -1,10 +1,11 @@
 {
-  "main.css": "static/css/main.70d1d3d8.css",
-  "main.css.map": "static/css/main.70d1d3d8.css.map",
-  "main.js": "static/js/main.85075add.js",
-  "main.js.map": "static/js/main.85075add.js.map",
+  "main.css": "static/css/main.184bfa59.css",
+  "main.css.map": "static/css/main.184bfa59.css.map",
+  "main.js": "static/js/main.880bf4df.js",
+  "main.js.map": "static/js/main.880bf4df.js.map",
   "static/media/add.svg": "static/media/add.c0201990.svg",
   "static/media/app.svg": "static/media/app.21d7aaf2.svg",
+  "static/media/bottombar.svg": "static/media/bottombar.7d544b3d.svg",
   "static/media/cart.svg": "static/media/cart.5a47c29e.svg",
   "static/media/favor.svg": "static/media/favor.5cda0b91.svg",
   "static/media/menu.svg": "static/media/menu.0b8b9248.svg",
@@ -12,5 +13,6 @@
   "static/media/notification.svg": "static/media/notification.22e2a656.svg",
   "static/media/search.svg": "static/media/search.1bac6932.svg",
   "static/media/shopping.svg": "static/media/shopping.549c9309.svg",
-  "static/media/to-left.svg": "static/media/to-left.c9637299.svg"
+  "static/media/to-left.svg": "static/media/to-left.c9637299.svg",
+  "static/media/topbar.svg": "static/media/topbar.c17cc9bb.svg"
 }
