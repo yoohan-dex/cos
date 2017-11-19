@@ -6003,10 +6003,6 @@ react-modal@^3.1.2:
     exenv "^1.2.0"
     prop-types "^15.5.10"
 
-react-overdrive@^0.0.9:
-  version "0.0.9"
-  resolved "http://registry.npm.taobao.org/react-overdrive/download/react-overdrive-0.0.9.tgz#681d8bee07067910415a5a23b8236220d8a31adb"
-
 react-scripts@1.0.17:
   version "1.0.17"
   resolved "http://registry.npm.taobao.org/react-scripts/download/react-scripts-1.0.17.tgz#c30029123b561a060227af4d7797d50a222d3fbf"

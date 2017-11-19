@@ -4,9 +4,9 @@
   "private": true,
   "homepage": "http://yoohan-dex.github.io/cos",
   "dependencies": {
+    "eslint-config-react-app": "^2.0.1",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
-    "react-overdrive": "^0.0.9",
     "react-scripts": "1.0.17",
     "react-swipeable": "^4.2.0",
     "react-swipeable-views": "^0.12.10",
@@ -31,5 +31,8 @@
     "@storybook/addon-links": "^3.2.15",
     "@storybook/react": "^3.2.15",
     "gh-pages": "^1.0.0"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
   }
 }

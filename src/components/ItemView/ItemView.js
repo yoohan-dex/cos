@@ -4,6 +4,7 @@ import './ItemView.css';
 import DatailBar from '../DetailBar';
 import cart from '../../icon/add.svg';
 import Swipeable from 'react-swipeable';
+import config from '../../config';
 class ItemView extends Component {
   state = {
     opacity: this.props.index + 1,
@@ -36,8 +37,11 @@ class ItemView extends Component {
   };
   render() {
     return (
-      <div className="item-background">
-        {this.state.down ? <DatailBar /> : ''}
+      <div
+        className="item-background"
+        style={{background: this.props.data[0].background}}
+      >
+        {this.state.down ? <DatailBar isIPhoneX={config.isIPhoneX} /> : ''}
         {this.props.data.map((x, i) => (
           <div
             key={i}
@@ -97,12 +101,30 @@ class ItemView extends Component {
             }}
           >
 
-            <div className="color-choice">
+            <div
+              className="color-choice"
+              style={{
+                transition: '.3s',
+                transform: this.state.uping && this.state.swipeUp !== 0
+                  ? 'translateY(0)'
+                  : 'translateY(20%)',
+                opacity: this.state.uping && this.state.swipeUp !== 0 ? 1 : 0,
+              }}
+            >
               <div className="red selected-color" />
               <div className="yellow" />
               <div className="blur" />
             </div>
-            <div className="weight-choice">
+            <div
+              className="weight-choice"
+              style={{
+                transition: '.3s',
+                transform: this.state.uping
+                  ? 'translateY(0)'
+                  : 'translateY(20%)',
+                opacity: this.state.uping ? 1 : 0,
+              }}
+            >
               <div className="little">15g</div>
               <div className="middle weight-selected">35g</div>
               <div className="large">70g</div>

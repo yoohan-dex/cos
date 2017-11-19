@@ -6,14 +6,14 @@ import './ItemRow.css';
 class ItemRow extends Component {
   state = {
     clicked: false,
+    // no
     style: new Array(8),
+    scroll: 0,
   };
 
-  componentDidUpdate() {
-    if (this.props.autoScroll) {
-      if (this.row.scrollTo) {
-        this.row.scrollTo({left: this.props.scroll});
-      }
+  componentDidUpdate(preP) {
+    if (this.props.autoScroll && preP.scroll !== this.props.scroll) {
+      this.row.scrollLeft = this.props.scroll;
     }
   }
 
@@ -23,6 +23,7 @@ class ItemRow extends Component {
         className="ItemRow"
         ref={x => this.row = x}
         onScroll={x => {
+          this.setState({scroll: x.currentTarget.scrollLeft});
           if (!this.props.autoScroll) {
             this.props.setScroll(x.currentTarget.scrollLeft);
           }
@@ -45,20 +46,20 @@ class ItemRow extends Component {
               }}
               onClick={e => {
                 const offsetLeft = e.currentTarget.offsetLeft;
-                const left = offsetLeft - this.props.scroll;
-                window.ee = e.currentTarget.offsetLeft - i * this.props.height;
-                this.setState(() => {
-                  this.state.style[i] = {
-                    position: 'absolute',
-                    zIndex: 100,
-                    left,
-                    transform: 'scale(2)',
-                    opacity: 0,
-                    // width: '100%',
-                    // height: '100%',
-                  };
-                  return this.state.style;
-                });
+                const left = offsetLeft - this.state.scroll;
+                const style = {
+                  position: 'absolute',
+                  zIndex: 100,
+                  left,
+                  transform: 'scale(2)',
+                  opacity: 0,
+                };
+                this.setState(s => [
+                  ...s.style.slice(0, i),
+                  style,
+                  ...s.style.slice(i + 1),
+                ]);
+
                 this.props.onSelect({name: this.props.name, index: i});
                 this.setState({clicked: !this.state.clicked});
               }}

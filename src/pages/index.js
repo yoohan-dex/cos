@@ -1,13 +1,16 @@
 import React, {Component} from 'react';
 import AppBar from '../components/AppBar';
 import AppBottomBar from '../components/AppBottomBar';
-
+import TopBar from '../components/TopBar';
+import BottomBar from '../components/BottomBar';
 import ItemRow from '../components/ItemRow';
 import Detail from './Detail';
 import mock from '../mock';
+import config from '../config';
+const isIPhoneX = config.isIPhoneX;
 
 const wh = window.innerHeight;
-const container = wh - 100; //186
+const container = wh - (isIPhoneX ? 180 : 100); //is iphoneX 180
 const center = container * 0.35;
 // const other = container - center;
 const bottom = container * 0.5 - 22;
@@ -23,11 +26,11 @@ export class Index extends Component {
   render() {
     return (
       <div className="container">
-        {/* <TopBar /> */}
-        <AppBar />
-        <AppBottomBar />
-        {/* <BottomBar /> */}
-        <div style={{top: 94}}>
+        {isIPhoneX ? <TopBar /> : ''}
+        <AppBar isIPhoneX={isIPhoneX} />
+        <AppBottomBar isIPhoneX={isIPhoneX} />
+        {isIPhoneX ? <BottomBar /> : ''}
+        <div>
           <ItemRow
             onSelect={this.setSelected}
             autoScroll={true}

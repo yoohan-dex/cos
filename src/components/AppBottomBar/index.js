@@ -9,7 +9,16 @@ import notification from '../../icon/notification.svg';
 class AppBottomBar extends Component {
   render() {
     return (
-      <div className="AppBottomBar">
+      <div
+        className="AppBottomBar"
+        style={
+          this.props.isIPhoneX
+            ? {
+                height: 84,
+              }
+            : {}
+        }
+      >
         <img src={index} alt="" />
         <img src={message} alt="" />
         <img src={favor} alt="" />

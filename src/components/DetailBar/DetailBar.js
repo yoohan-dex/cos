@@ -5,7 +5,7 @@ import cart from '../../icon/cart.svg';
 class DetailBar extends Component {
   render() {
     return (
-      <div className="DetailBar">
+      <div className="DetailBar" style={{top: this.props.isIPhoneX ? 44 : 0}}>
         <div className="toLeft">
           <img src={toLeft} alt="" />
         </div>
