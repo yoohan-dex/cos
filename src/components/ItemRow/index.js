@@ -54,11 +54,13 @@ class ItemRow extends Component {
                   transform: 'scale(2)',
                   opacity: 0,
                 };
-                this.setState(s => [
-                  ...s.style.slice(0, i),
-                  style,
-                  ...s.style.slice(i + 1),
-                ]);
+                this.setState(s => ({
+                  style: [
+                    ...s.style.slice(0, i),
+                    style,
+                    ...s.style.slice(i + 1),
+                  ],
+                }));
 
                 this.props.onSelect({name: this.props.name, index: i});
                 this.setState({clicked: !this.state.clicked});
